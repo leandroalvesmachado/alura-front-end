@@ -1,10 +1,10 @@
-export class ContaPoupanca {
+import { Conta } from "./Conta";
+
+import { Conta } from './Conta.js';
+
+export class ContaPoupanca extends Conta {
     
     constructor(saldoInicial, cliente, agencia) {
-        // iniciando atributos com a convenção de atributo privado
-        // usar acessores para acessar os atributos privados
-        this._saldo = saldoInicial;
-        this._cliente = cliente;
-        this._agencia = agencia;
+        super(saldoInicial, cliente, agencia);
     }
 }
