@@ -1,8 +1,8 @@
 // componente BotaoDeleta
 const BotaoDeleta = () => {
     const botaoDeleta = document.createElement('button');
+    
     botaoDeleta.innerText = 'deletar';
-
     botaoDeleta.addEventListener('click', deletarTarefa);
 
     return botaoDeleta;
@@ -18,6 +18,8 @@ const deletarTarefa = (evento) => {
 
     // remove o elemento li que possui o botão
     tarefaCompleta.remove();
+
+    return botaoDeleta;
 };
 
 // comportamento igual ao do JS IIEF

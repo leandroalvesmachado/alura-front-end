@@ -1,5 +1,5 @@
-import  { BotaoConClui } from './componentes/concluiTarefa.js';
-import  { BotaoDeleta } from './componentes/deletaTarefa.js';
+import BotaoConClui from './componentes/concluiTarefa.js';
+import BotaoDeleta from './componentes/deletaTarefa.js';
 
 const criarTarefa = (evento) => {
     // evitar o comportamento padrao do botão
