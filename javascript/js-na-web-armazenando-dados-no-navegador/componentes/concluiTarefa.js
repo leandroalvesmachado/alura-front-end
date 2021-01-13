@@ -10,18 +10,28 @@ const BotaoConClui = () => {
 };
 
 // ação do componente BotaoConClui
+// const concluirTarefa = (evento) => {
+//     // saber o alvo do evento, saber quem foi clicado
+//     const botaoConClui = evento.target;
+
+//     // parentElement = pai do elemento
+//     const tarefaCompleta = botaoConClui.parentElement;
+
+//     // efeito de rabisco, riscando o nome
+//     // toggle retorna um boolean
+//     tarefaCompleta.classList.toggle('done');
+// };
+
+
+// ação do componente BotaoConClui
 const concluirTarefa = (evento) => {
-    // saber o alvo do evento, saber quem foi clicado
-    const botaoConClui = evento.target;
+    const tarefaCadastradas = JSON.parse(localStorage.getItem('tarefas')) || [];
 
-    // parentElement = pai do elemento
-    const tarefaCompleta = botaoConClui.parentElement;
+    tarefaCadastradas[id].concluida = !tarefaCadastradas[id].concluida;
+    localStorage.setItem('tarefas', JSON.stringify(tarefaCadastradas));
 
-    // efeito de rabisco, riscando o nome
-    // toggle retorna um boolean
-    tarefaCompleta.classList.toggle('done');
+    atualiza();
 };
-
 
 // comportamento igual ao do JS IIEF
 // transforma o arquivo js em um módulo, no caso de nome BotaoConclui
